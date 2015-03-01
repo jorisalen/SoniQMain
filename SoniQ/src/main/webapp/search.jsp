@@ -21,7 +21,7 @@
 			</form>
 
 
-			
+
 
 
 
@@ -82,7 +82,16 @@
 				</tbody>
 			</table>
 		</div>
+		<div id="artistinfo">
+			<table>
+				<tbody>
+					<tr><h4>Artist info</h4></tr>
+					<tr><div class="eigenschap">Info</div> ${summary}</tr>
 
+
+				</tbody>
+			</table>
+		</div>
 	</div>
 
 
@@ -118,7 +127,7 @@
 		</div>
 		<!-- /.modal-dialog -->
 	</div>
-	</div>
+
 
 
 
@@ -130,8 +139,8 @@
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Add this link to one of your
-						playlists or create a new one</h4>
+					<h4 class="modal-title">Add this link to one of your playlists
+						or create a new one</h4>
 				</div>
 				<div class="modal-body">
 					<form action="Controller?action=addToPlaylist" method="POST">
@@ -174,8 +183,7 @@
 		<!-- /.modal-content -->
 	</div>
 	<!-- /.modal-dialog -->
-	</div>
-	</div>
+
 
 	<jsp:include page="partials/footer.jsp"></jsp:include>
 

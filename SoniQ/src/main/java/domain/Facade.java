@@ -202,4 +202,8 @@ public class Facade {
 		LastFmApi api = new LastFmApi();
 		return api.getTopArtists();
 	}
+	public String getSummary(String query) {
+		LastFmApi api = new LastFmApi();
+		return api.getSummary(query);
+	}
 }

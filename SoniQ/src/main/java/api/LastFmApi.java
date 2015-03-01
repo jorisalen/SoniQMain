@@ -142,9 +142,9 @@ public class LastFmApi implements Api {
 		return lijst;
 	}
 
-	public ArrayList<String> getSummary(String zoekterm) {
+	public String getSummary(String zoekterm) {
 		ApiCaller call = new ApiCaller();
-		ArrayList<String> lijst = null;
+		String lijst ="" ;
 		try {
 			String test6 = call
 					.doGet("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist="
@@ -153,12 +153,30 @@ public class LastFmApi implements Api {
 			JsonParser jsonParser = new JsonParser();
 			System.out.println(test6);
 			JsonElement je = jsonParser.parse(test6);
-			String result = je.getAsJsonObject().getAsJsonObject("artist")
-					.getAsJsonObject("bio").get("summary").toString();
+			lijst = je.getAsJsonObject().getAsJsonObject("artist")
+					.getAsJsonObject("bio").get("summary").getAsString();
 		} catch (IOException e) {
 			e.getMessage();
 		}
 		return lijst;
 	}
-
+	
+	public String getPicture(String zoekterm) {
+		ApiCaller call = new ApiCaller();
+		String lijst ="" ;
+		try {
+			String test6 = call
+					.doGet("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist="
+							+ URLEncoder.encode(zoekterm, "UTF-8")
+							+ "&api_key=745dded8e08b7c4e3c30511010b79d48&format=json");
+			JsonParser jsonParser = new JsonParser();
+			System.out.println(test6);
+			JsonElement je = jsonParser.parse(test6);
+			lijst = je.getAsJsonObject().getAsJsonObject("artist")
+					.getAsJsonObject("bio").get("summary").getAsString();
+		} catch (IOException e) {
+			e.getMessage();
+		}
+		return lijst;
+	}
 }

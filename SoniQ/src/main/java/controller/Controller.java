@@ -247,6 +247,8 @@ public class Controller extends HttpServlet {
 		request.setAttribute("query", query);
 		request.setAttribute("records", service.search(query));
 		request.setAttribute("artists", service.getTopArtists());
+		request.setAttribute("summary", service.getSummary(query));
+
 		
 		
 		HttpSession session = request.getSession();

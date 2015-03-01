@@ -28,19 +28,51 @@ body,html {
   height:6px;
   background-size: 100% auto;
 }
-#result{
-	position:absolute;
-	height:100%;
-	width: 60%;
-	background-color: #FFFFFF;;
+
+
+
+#result {
+	padding-left:10px;
+	padding-right:5px;
+	height: 100%;
+	width: 40%;
+	float: left;
+	color: #00000;
+	padding-right:5px;
 }
 
-#playlist{
-	width:40%;
-	float:right;
-	padding-left:20px;
-	font-size:3em;
+.eigenschap {
+	font:bold;
+	color: maroon;
 }
+
+#playlist {
+	padding-left:10px;
+	width: 30%;
+	float: right;
+	max-width:30%;
+	min-width:30%;
+	height:100%;
+	border-left:solid 2px #FFFFFF;
+}
+
+#artistinfo {
+	padding-right:5px;
+	padding-left:10px;
+	width: 30%;
+	height: 100%;
+	text-align:justify;
+	float: left;
+	min-width:30%;
+	border-left:solid 2px #FFFFFF;
+	}
+
+
+
+
+
+
+
 
 #playlist h1{
 	font-family: 'Amatic SC', cursive;
