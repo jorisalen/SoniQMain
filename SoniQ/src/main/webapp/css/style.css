@@ -45,6 +45,13 @@ body,html {
 	font:bold;
 	color: maroon;
 }
+.eigenschap.a{
+	color:olive;
+}
+
+.fotoInfo{
+	text-align:center;
+}
 
 #playlist {
 	padding-left:10px;

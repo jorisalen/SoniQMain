@@ -86,6 +86,7 @@
 			<table>
 				<tbody>
 					<tr><h4>Artist info</h4></tr>
+					<tr><div class="fotoInfo"><img src="${fotoInfo}"></div></tr>
 					<tr><div class="eigenschap">Info</div> ${summary}</tr>
 
 

@@ -206,4 +206,9 @@ public class Facade {
 		LastFmApi api = new LastFmApi();
 		return api.getSummary(query);
 	}
+
+	public Object getPicture(String query) {
+		LastFmApi api = new LastFmApi();
+		return api.getPicture(query);
+	}
 }

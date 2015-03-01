@@ -173,7 +173,7 @@ public class LastFmApi implements Api {
 			System.out.println(test6);
 			JsonElement je = jsonParser.parse(test6);
 			lijst = je.getAsJsonObject().getAsJsonObject("artist")
-					.getAsJsonObject("bio").get("summary").getAsString();
+					.getAsJsonArray("image").get(3).getAsJsonObject().get("#text").getAsString();
 		} catch (IOException e) {
 			e.getMessage();
 		}
