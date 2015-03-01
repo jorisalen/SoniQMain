@@ -78,7 +78,7 @@ public class LastFmApi implements Api {
 
 	public HashMap<String, String> getTopAlbums(String zoekterm) {
 		ApiCaller call = new ApiCaller();
-		HashMap<String, String> lijst = null;
+		HashMap<String, String> lijst = new HashMap<String, String>();
 		try {
 			String test6 = call
 					.doGet("http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist="
@@ -90,14 +90,16 @@ public class LastFmApi implements Api {
 			JsonArray ja = je.getAsJsonObject().getAsJsonObject()
 					.getAsJsonObject("topalbums").getAsJsonArray("album");
 			for (JsonElement e : ja) {
-				lijst.put(e.getAsJsonObject().get("name").toString(), e
-						.getAsJsonObject().get("url").toString());
+				lijst.put(e.getAsJsonObject().get("name").getAsString(), e
+						.getAsJsonObject().get("url").getAsString());
 			}
 		} catch (IOException e) {
 			e.getMessage();
 		}
 		return lijst;
 	}
+	
+	
 
 	public HashMap<String, String> getEvents(String zoekterm) {
 		ApiCaller call = new ApiCaller();
@@ -110,11 +112,10 @@ public class LastFmApi implements Api {
 			JsonParser jsonParser = new JsonParser();
 			System.out.println(test6);
 			JsonElement je = jsonParser.parse(test6);
-			JsonArray ja = je.getAsJsonObject().getAsJsonObject()
-					.getAsJsonObject("events").getAsJsonArray("event");
+			JsonArray ja = je.getAsJsonObject().getAsJsonObject("events").getAsJsonArray("event");
 			for (JsonElement e : ja) {
-				lijst.put(e.getAsJsonObject().get("name").toString(), e
-						.getAsJsonObject().get("url").toString());
+				lijst.put(e.getAsJsonObject().getAsJsonObject("venue").get("name").getAsString(), e
+						.getAsJsonObject().getAsJsonObject("venue").get("url").getAsString());
 			}
 		} catch (IOException e) {
 			e.getMessage();

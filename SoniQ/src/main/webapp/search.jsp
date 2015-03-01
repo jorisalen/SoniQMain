@@ -85,11 +85,68 @@
 		<div id="artistinfo">
 			<table>
 				<tbody>
-					<tr><h4>Artist info</h4></tr>
-					<tr><div class="fotoInfo"><img src="${fotoInfo}"></div></tr>
-					<tr><div class="eigenschap">Info</div> ${summary}</tr>
+					<tr>
+						<h4>Artist info</h4>
+					</tr>
+					<tr>
+						<div class="fotoInfo">
+							<img src="${fotoInfo}">
+						</div>
+					</tr>
+					<tr>
+						<div class="eigenschap">Info</div>
+						${summary}
+					</tr>
+					<br>
+					<tr>
+						<div class=eigenschap>Albums</div>
+						<c:forEach var="type" items="${albums}">
+							<a href="${type.value}">${type.key}</a>
+						</c:forEach>
 
 
+					</tr>
+					<tr>
+						<div class=eigenschap>Events</div>
+
+
+
+						<button type="button" class="myButton"
+							data-toggle="modal" data-target="#myModal">Browse events</button>
+						<div class="modal fade" id="myModal">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"
+											aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+										<h4 class="modal-title">Events</h4>
+									</div>
+									<div class="modal-body">
+										<p>
+										<ul>
+											<li><c:forEach var="event" items="${events}">
+													<a href="${event.value}">${event.key}</a>
+												</c:forEach></li>
+										</ul>
+
+										</p>
+
+									</div>
+
+									<div class="modal-footer">
+									
+										<button type="button" class="btn btn-default"
+											data-dismiss="modal">Close</button>
+									</div>
+								</div>
+								<!-- /.modal-content -->
+							</div>
+							<!-- /.modal-dialog -->
+						</div>
+						<!-- /.modal -->
+					</tr>
 				</tbody>
 			</table>
 		</div>
@@ -187,6 +244,7 @@
 
 
 	<jsp:include page="partials/footer.jsp"></jsp:include>
+
 
 	<script>
 		$(document).on("click", ".open-share", function() {

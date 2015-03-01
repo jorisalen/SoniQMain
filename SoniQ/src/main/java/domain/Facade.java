@@ -211,4 +211,10 @@ public class Facade {
 		LastFmApi api = new LastFmApi();
 		return api.getPicture(query);
 	}
+
+	public Object getTopAlbums(String query) {
+		LastFmApi api = new LastFmApi();
+		return api.getTopAlbums(query);
+	}
+	
 }

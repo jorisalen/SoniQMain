@@ -249,6 +249,10 @@ public class Controller extends HttpServlet {
 		request.setAttribute("artists", service.getTopArtists());
 		request.setAttribute("summary", service.getSummary(query));
 		request.setAttribute("fotoInfo", service.getPicture(query));
+		request.setAttribute("albums", service.getTopAlbums(query));
+		request.setAttribute("events", service.getEvents(query));
+
+		
 
 		
 		
