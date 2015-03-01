@@ -143,6 +143,7 @@
 
 
 					</tr>
+					<c:if test="${not empty events}">
 					<tr>
 						<div class=eigenschap>Events</div>
 
@@ -184,6 +185,7 @@
 						</div>
 						<!-- /.modal -->
 					</tr>
+					</c:if>
 
 					<tr>
 						<div class="eigenschap">Similar artists</div>
