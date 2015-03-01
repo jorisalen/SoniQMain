@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import api.ApiException;
+
 import com.auth0.Auth0User;
 import com.auth0.NonceGenerator;
 import com.auth0.NonceStorage;
@@ -251,6 +253,11 @@ public class Controller extends HttpServlet {
 		request.setAttribute("fotoInfo", service.getPicture(query));
 		request.setAttribute("albums", service.getTopAlbums(query));
 		request.setAttribute("events", service.getEvents(query));
+		try {
+			request.setAttribute("similars", service.getSimilarArtists(query));
+		} catch (ApiException e) {
+			// TODO Auto-generated catch block
+		}
 
 		
 

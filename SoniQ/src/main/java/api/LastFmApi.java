@@ -62,7 +62,7 @@ public class LastFmApi implements Api {
 			JsonElement je = jsonParser.parse(json);
 			JsonArray ja = je.getAsJsonObject().getAsJsonObject("artist").getAsJsonObject("similar").getAsJsonArray("artist");
 			for (JsonElement e : ja) {
-				lijst.add(e.getAsJsonObject().get("name").toString());
+				lijst.add(e.getAsJsonObject().get("name").getAsString());
 			}
 		} catch (UnsupportedEncodingException e1) {
 			// TODO Auto-generated catch block
