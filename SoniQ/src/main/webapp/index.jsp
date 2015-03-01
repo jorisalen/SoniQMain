@@ -15,7 +15,7 @@
 	<div class='container'>
 		<p class="logoMain">SoniQ</p>
 		<div class='row'>
-			<form method="post" action="Controller?action=search">
+			<form method="POST" action="Controller">
 				<div class='input-append' style="margin-top: 30%; margin-left: 10%">
 					<input name="query" class="form-control" id="main_search"
 						type="text">

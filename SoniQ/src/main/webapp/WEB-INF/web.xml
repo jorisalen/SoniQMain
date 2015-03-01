@@ -6,7 +6,6 @@
         version="2.5">
         
         
-    <!-- Servlets -->
    <servlet>
    		<servlet-name>Error</servlet-name>
         <servlet-class>controller.ErrorController</servlet-class>

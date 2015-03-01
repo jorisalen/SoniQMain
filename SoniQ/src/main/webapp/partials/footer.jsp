@@ -13,7 +13,9 @@
  <script src="./js/jquery.js"></script>
  <script src="./js/bootstrap.js"></script>
  <script src="./js/cheet.js"></script>
- <script src="./js/audio.min.js"></script>
+ <script src="./audiojs/audio.min.js"></script>
+ <script src="./audiojs/playlist.js"></script>
+ 
  <script>
 	 cheet('b a a s k a t', function () {
 		 var img = document.createElement("IMG");

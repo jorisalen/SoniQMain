@@ -11,8 +11,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
 public class LastFmApi implements Api {
-
-	@Override
+	
 	public void doCall(String zoekterm) throws ApiException {
 		// Similar artists api
 		ApiCaller call = new ApiCaller();
@@ -112,11 +111,18 @@ public class LastFmApi implements Api {
 			JsonParser jsonParser = new JsonParser();
 			System.out.println(test6);
 			JsonElement je = jsonParser.parse(test6);
-			JsonArray ja = je.getAsJsonObject().getAsJsonObject("events").getAsJsonArray("event");
-			for (JsonElement e : ja) {
-				lijst.put(e.getAsJsonObject().getAsJsonObject("venue").get("name").getAsString(), e
-						.getAsJsonObject().getAsJsonObject("venue").get("url").getAsString());
+			JsonArray ja = new JsonArray();
+			try{
+				 ja = je.getAsJsonObject().getAsJsonObject("events").getAsJsonArray("event");
+				 for (JsonElement e : ja) {
+						lijst.put(e.getAsJsonObject().getAsJsonObject("venue").get("name").getAsString(), e
+								.getAsJsonObject().getAsJsonObject("venue").get("url").getAsString());
+					}
+			} catch (NullPointerException e){
+				// niks loool
 			}
+			
+			
 		} catch (IOException e) {
 			e.getMessage();
 		}

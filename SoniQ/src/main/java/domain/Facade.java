@@ -102,8 +102,8 @@ public class Facade {
 	 * method for adding members pretty straight forward
 	 * 
 	 */
-	public void addMember(String naam, String vnaam, String pw, String email, Date geb_datum)throws DbException{
-//		database.addMember(naam,vnaam,pw,email,geb_datum);
+	public void addMember(String naam, String vnaam, String pw, String email, String picture)throws DbException{
+		database.addMember(naam,vnaam,pw,email,null, null, null, picture);
 	}
 	
 	public Member getMember(String userId)throws DbException{
