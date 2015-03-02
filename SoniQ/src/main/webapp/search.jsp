@@ -21,7 +21,7 @@
 				<input name="query" class="form-control" placeholder="search">
 			</form>
 
-			<div id="playlist-container" class="table-striped">
+			<div id="playlist-container">
 				<ol id="result">
 
 					<c:forEach var="record" items="${records}">
@@ -31,27 +31,25 @@
 								width="20px"><a href="#" data-src="${record.link}">${record.title}</a>
 							</li>
 						</div>
-							<c:if test="${not empty user}">
-						<div class="commands">
+						<c:if test="${not empty user}">
+							<div class="commands">
 								<a
 									href="Controller?action=upvote&id=${record.recordId}&query=${query}"
 									class="upvote"> <span class="glyphicon glyphicon-ok-circle"></span>${record.upvotes}
-								</a>
-								<a
+								</a> <a
 									href="Controller?action=downvote&id=${record.recordId}&query=${query}"
 									class="downvote "><span
 									class="glyphicon glyphicon-remove-circle"></span>
-									${record.downvotes} </a>
-								<a href="Controller?action=comment&id=${record.recordId}"
+									${record.downvotes} </a> <a
+									href="Controller?action=comment&id=${record.recordId}"
 									class="btn"><span class="glyphicon glyphicon-comment"></span></a>
 								<a data-id="${record.recordId}" data-link="${record.link}"
 									data-title="${record.title}" data-duration="${record.duration}"
 									class="btn open-add" data-toggle="modal"
 									data-target="#addToPlaylist"><span
 									class="glyphicon glyphicon-align-justify"></span></a>
-						</div>
-									
-							</c:if>
+							</div>
+						</c:if>
 					</c:forEach>
 				</ol>
 

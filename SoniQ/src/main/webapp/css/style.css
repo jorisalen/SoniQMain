@@ -10,12 +10,19 @@ body, html {
 }
 
 .commands {
-	float:right;
+	float:left;
 	width:30%;
+	height:2%;
 }
 
 .links {
+	float:left;
 	width:70%;
+	max-width:70%;
+}
+
+#resultLine{
+	width:100%;
 }
 
 .navbar {
@@ -28,7 +35,7 @@ body, html {
 }
 
 #result a{
-	color:#536b00;
+	color:#253D0C;
 }
 #contentSearch {
 	height: 100%;
@@ -66,7 +73,7 @@ body, html {
 	width: 40%;
 	float: left;
 	font-family: calibri;
-	color: #00000;
+	color: #000000;
 	padding-right:5px;
 }
 
@@ -92,7 +99,7 @@ body, html {
 .hoofdingKolom {
 	font-size:2em;
 	font-family: 'Amatic SC', cursive;
-	color:#5c6b27;
+	color:#253D0C;
 }
 
 #info {
