@@ -13,38 +13,45 @@
 	<jsp:include page="partials/auth0.jsp" />
 
 	<div id="contentSearch">
-		<div id="result">
+		<div id="searchResult">
 
-			<p class="searchQuery">You've searched for: ${query}</p>
+			<p class="hoofdingKolom">You've searched for: ${query}</p>
 			<p class="nowPlaying"></p>
 			<form method="POST" action="Controller?action=search">
 				<input name="query" class="form-control" placeholder="search">
 			</form>
 
-			<div id="playlist-container">
-				<ol id="playlist">
+			<div id="playlist-container" class="table-striped">
+				<ol id="result">
 
 					<c:forEach var="record" items="${records}">
-						<li class="records"><img src="./img/${record.type}.png"
-							width="20px"><a href="#" data-src="${record.link}">${record.title}</a>
-						</li>
+						<div class="links">
 
-						<c:if test="${not empty user}">
-							<a
-								href="Controller?action=upvote&id=${record.recordId}&query=${query}"
-								class="upvote"> ${record.upvotes} </a>
-							<a
-								href="Controller?action=downvote&id=${record.recordId}&query=${query}"
-								class="downvote "> ${record.downvotes} </a>
-							<a href="Controller?action=comment&id=${record.recordId}"
-								class="btn">comments</a>
-							<a data-id="${record.recordId}" data-link="${record.link}"
-								data-title="${record.title}" data-duration="${record.duration}"
-								class="btn open-add" data-toggle="modal"
-								data-target="#addToPlaylist">+</a>
-						</c:if>
-
-
+							<li class="records"><img src="./img/${record.type}.png"
+								width="20px"><a href="#" data-src="${record.link}">${record.title}</a>
+							</li>
+						</div>
+							<c:if test="${not empty user}">
+						<div class="commands">
+								<a
+									href="Controller?action=upvote&id=${record.recordId}&query=${query}"
+									class="upvote"> <span class="glyphicon glyphicon-ok-circle"></span>${record.upvotes}
+								</a>
+								<a
+									href="Controller?action=downvote&id=${record.recordId}&query=${query}"
+									class="downvote "><span
+									class="glyphicon glyphicon-remove-circle"></span>
+									${record.downvotes} </a>
+								<a href="Controller?action=comment&id=${record.recordId}"
+									class="btn"><span class="glyphicon glyphicon-comment"></span></a>
+								<a data-id="${record.recordId}" data-link="${record.link}"
+									data-title="${record.title}" data-duration="${record.duration}"
+									class="btn open-add" data-toggle="modal"
+									data-target="#addToPlaylist"><span
+									class="glyphicon glyphicon-align-justify"></span></a>
+						</div>
+									
+							</c:if>
 					</c:forEach>
 				</ol>
 
@@ -52,8 +59,8 @@
 
 		</div>
 
-		<div id="playlistDiv">
-			<h1>My playlists</h1>
+		<div id="playlist">
+			<p class="hoofdingKolom">My playlists</p>
 			<table>
 				<tbody>
 
@@ -80,11 +87,11 @@
 			</table>
 		</div>
 
-		<div id="artistinfo">
+		<div id="info">
 			<table>
 				<tbody>
 					<tr>
-						<h4>${query}</h4>
+						<p class="hoofdingKolom">${query}</p>
 					</tr>
 					<tr>
 						<div class="fotoInfo">
@@ -144,55 +151,55 @@
 
 					</tr>
 					<c:if test="${not empty events}">
-					<tr>
-						<div class=eigenschap>Events</div>
+						<tr>
+							<div class=eigenschap>Events</div>
 
 
 
-						<button type="button" class="myButton" data-toggle="modal"
-							data-target="#eventknop">Browse events</button>
-						<div class="modal fade" id="eventknop">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal"
-											aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-										<h4 class="modal-title">Events</h4>
+							<button type="button" class="myButton" data-toggle="modal"
+								data-target="#eventknop">Browse events</button>
+							<div class="modal fade" id="eventknop">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal"
+												aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+											<h4 class="modal-title">Events</h4>
+										</div>
+										<div class="modal-body">
+											<p>
+											<ul>
+												<li><c:forEach var="event" items="${events}">
+														<a href="${event.value}">${event.key}</a>
+													</c:forEach></li>
+											</ul>
+
+											</p>
+
+										</div>
+
+										<div class="modal-footer">
+
+											<button type="button" class="btn btn-default"
+												data-dismiss="modal">Close</button>
+										</div>
 									</div>
-									<div class="modal-body">
-										<p>
-										<ul>
-											<li><c:forEach var="event" items="${events}">
-													<a href="${event.value}">${event.key}</a>
-												</c:forEach></li>
-										</ul>
-
-										</p>
-
-									</div>
-
-									<div class="modal-footer">
-
-										<button type="button" class="btn btn-default"
-											data-dismiss="modal">Close</button>
-									</div>
+									<!-- /.modal-content -->
 								</div>
-								<!-- /.modal-content -->
+								<!-- /.modal-dialog -->
 							</div>
-							<!-- /.modal-dialog -->
-						</div>
-						<!-- /.modal -->
-					</tr>
+							<!-- /.modal -->
+						</tr>
 					</c:if>
 
 					<tr>
 						<div class="eigenschap">Similar artists</div>
-							<c:forEach var="similar" items="${similars}">
-								<a href="Controller?action=search&query=${similar}">${similar}</a>
-							</c:forEach>
-						
+						<c:forEach var="similar" items="${similars}">
+							<a href="Controller?action=search&query=${similar}">${similar}</a>
+						</c:forEach>
+
 
 					</tr>
 				</tbody>

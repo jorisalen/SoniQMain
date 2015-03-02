@@ -12,13 +12,23 @@
 
 	<jsp:include page="partials/header.jsp" />
 
-	<div class='container'>
-		<p class="logoMain">SoniQ</p>
-		<div class='row'>
-			<form method="POST" action="Controller">
-				<div class='input-append' style="margin-top: 30%; margin-left: 10%">
-					<input name="query" class="form-control" id="main_search"
-						type="text">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="container">
+		<img id="logo" src="./img/Soniq2.png">
+		<div class="row">
+			<form method="post" action="Controller?action=search">
+				<div class="input-append">
+					<input name="query" class="form-control" id="main_search" type="text">
 				</div>
 
 			</form>
@@ -30,6 +40,29 @@
 			</div>
 		</div>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 
+	<div class='container'>
+		<p class="logoMain"><img src="./img/Soniq2.png"></p>
+		<div class='row'>
+
+			
+		</div>
+	</div> -->
 
 	<jsp:include page="partials/footer.jsp" />
 

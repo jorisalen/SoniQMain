@@ -9,7 +9,7 @@
 <div class="navbar navbar-default navbar-fixed-top">
 	<div id="container">
 		<div id="mainNav" class="navbar-header">
-			<a class="navbar-brand" href="Controller?action=home"> SoniQ</a>
+			<a class="navbar-brand" href="Controller?action=home"> <img id="logoHeader" src="./img/Soniq2.png"></a>
 			<audio preload></audio>
 			<div id=right>
 				<div class="dropdown dropdown-menu-right">
@@ -38,13 +38,7 @@
 							href="#">Profile <span class="tab"></span><img
 								src="${picture}";></a></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1"
-							href="#">FB-likes</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1"
 							href="#">Soundcloud playlist</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1"
-							href="#">YouTube playlist</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1"
-							href="#">Google+ access</a></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1"
 							onclick="widget.signin({state: ''})">Log in</a></li>
 						<!-- Indien user ingelogd is, zou het veldje log in moeten veranderen naar "Log out" (actie hiervoor dient ook te wijzigen) -->

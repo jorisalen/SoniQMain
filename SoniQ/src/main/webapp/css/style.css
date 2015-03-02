@@ -7,79 +7,120 @@ body, html {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	overflow: hidden;
 }
 
+.commands {
+	float:right;
+	width:30%;
+}
+
+.links {
+	width:70%;
+}
+
+.navbar {
+	font-family: 'Amatic SC', cursive;
+}
+
+.audioPlayer {
+	height: 50px;
+	border: 10px solid black;
+}
+
+#result a{
+	color:#536b00;
+}
 #contentSearch {
-	margin-top: 50px;
-	padding-top: 0px;
 	height: 100%;
 	width: 100%;
+	padding-top:60px;
+}
+
+.playlistName {
+	font-size: 1.5em;
 }
 
 .woordenwolk {
 	text-align: center;
 }
 
-.playListName {
-	font-size: 2em;
+.woordenwolk a{
+	color:#445027;
+	width:70%;
 }
 
-.long-art {
-	background:
-		url('http://www.gcclinux.co.uk/wp-content/themes/twentythirteen/images/headers/diamond.png')
-		no-repeat;
-	height: 6px;
-	background-size: 100% auto;
+
+#info img{
+	width:80%;
+	max-width:200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+	
+}
+
+#searchResult {
+	padding-left:10px;
+	padding-right:5px;
+	height: 100%;
+	width: 40%;
+	float: left;
+	font-family: calibri;
+	color: #00000;
+	padding-right:5px;
+}
+
+
+#playlist {
+	padding-left:10px;
+	width: 30%;
+	float: right;
+	max-width:30%;
+	min-width:30%;
+	height:100%;
+	border-left:solid 2px #FFFFFF;
+}
+
+#logoHeader{
+	width: 70px;
+}
+
+#playlist td {
+	padding: 4px;
+}
+
+.hoofdingKolom {
+	font-size:2em;
+	font-family: 'Amatic SC', cursive;
+	color:#5c6b27;
+}
+
+#info {
+	padding-right:5px;
+	padding-left:10px;
+	width: 30%;
+	height: 100%;
+	text-align:justify;
+	float: left;
+	min-width:30%;
+	border-left:solid 2px #FFFFFF;
+	font-family: calibri;
+	}
+
+.searchQuery {
+	margin-left: 5px;
+	font-size: 2em;
+	font-family: 'Amatic SC', cursive;
+	color: black;
 }
 
 #mainNav {
 	width: 100%;
 	white-space: nowrap;
+	white-space: nowrap;
 	-webkit-box-shadow: 0px 18px 44px -13px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 18px 44px -13px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 18px 44px -13px rgba(0, 0, 0, 0.75);
-}
-
-#right {
-	position: relative;
-	float: right;
-	display: in-line;
-	white-space: nowrap;
-	margin-right: 100px;
-}
-
-#result {
-	padding-left: 10px;
-	padding-right: 5px;
-	height: 100%;
-	width: 40%;
-	float: left;
-	color: #00000;
-	padding-right: 5px;
-}
-
-.eigenschap {
-	font: bold;
-	color: maroon;
-}
-
-.eigenschap a {
-	color: olive;
-}
-
-.fotoInfo {
-	text-align: center;
-}
-
-#playlistDiv {
-	padding-left: 10px;
-	width: 30%;
-	float: right;
-	max-width: 30%;
-	min-width: 30%;
-	height: 100%;
-	border-left: solid 2px #FFFFFF;
 }
 
 #artistinfo {
@@ -94,72 +135,17 @@ body, html {
 	border-left: solid 2px #FFFFFF;
 }
 
-.myButton {
-	-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
-	box-shadow: inset 0px 1px 0px 0px #ffffff;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9
-		), color-stop(1, #e9e9e9));
-	background: -moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background: -webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background: -o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background: -ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',
-		endColorstr='#e9e9e9', GradientType=0);
-	background-color: #f9f9f9;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	border-radius: 6px;
-	border: 1px solid #dcdcdc;
-	display: inline-block;
-	cursor: pointer;
-	color: #666666;
-	text-align: center;
-	font-family: arial;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 6px 24px;
-	text-decoration: none;
-	text-shadow: 0px 1px 0px #ffffff;
-}
-
-.myButton:hover {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9
-		), color-stop(1, #f9f9f9));
-	background: -moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-	background: -webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-	background: -o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-	background: -ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-	background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9',
-		endColorstr='#f9f9f9', GradientType=0);
-	background-color: #e9e9e9;
-}
-
-.myButton:active {
+#right {
 	position: relative;
-	top: 1px;
+	float: right;
+	display: in-line;
+	white-space: nowrap;
+	margin-right: 100px;
 }
 
-#playlistDiv h1 {
-	font-family: 'Amatic SC', cursive;
-}
 
-#playlistDiv td {
-	padding: 4px;
-}
-
-.searchQuery {
-	margin-left: 5px;
-	font-size: 2em;
-	font-family: 'Amatic SC', cursive;
-	color: black;
-}
-
-#header {
-	background-color: #090F00;
-	height: 5%;
+span.tab {
+	padding: 0 20px;
 }
 
 #searchField {
@@ -167,10 +153,27 @@ body, html {
 	padding-top: 1%
 }
 
-#content {
+#container {
 	text-align: center;
-	height: 65%;
-	margin-top: 14%;
+}
+
+#logo {
+	margin-top: 8%;
+	width: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.contact {
+	margin-top: 5%;
+	font-family: 'Amatic SC', cursive;
+	font-size: 150%;
+}
+
+.cbutton {
+	background-color: #DAF29F;
+	border-color: #819649;
 }
 
 #header form {
@@ -187,10 +190,6 @@ body, html {
 	margin-top: 15px;
 }
 
-a:hover {
-	text-decoration: none;
-}
-
 #header input {
 	margin-left: 3px;
 }
@@ -202,413 +201,50 @@ li {
 
 a {
 	text-decoration: none;
-	color: black;
+	color:#536b00;
+}
+
+
+
+a:hover {
+	color: #E0D500;
+	text-decoration: none;
 }
 
 #footer {
-	font-family: 'Amatic SC', cursive;
+	font-family: calibri;
 	position: fixed;
 	bottom: 0;
 	height: 1.5em;
 	width: 100%;
+	font-size: 1em;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #9E9E9E;
+}
+
+.greetings {
+	float: right;
+	color: white;
 	font-size: 2em;
-	text-align: center;
-}
-
-.logo {
 	font-family: 'Amatic SC', cursive;
-	margin-left: 5px;
-	font-size: 3em;
-	position: absolute;
 }
 
-.iframe {
-	padding-left: 30px;
-	width: 100%;
+.toa {
+	margin-top: 4%;
+	font-family: calibri;
+	height: 80%
 }
 
-.logoMain {
-	text-align: center;
-	margin-top: 200px;
-	font-size: 13em;
+.toa h1 {
+	color: #B8E055;
+}
+
+#related{
+	margin:1% 2px;
+	height:6%;
 	font-family: 'Amatic SC', cursive;
-	margin-bottom: -350px;
-}
-
-.modal {
-	display: none;
-	position: fixed;
-	-index: 1000;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: rgba(255, 255, 255, .8)
-		url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
-}
-
-/* When the body has the loading class, we turn
-   the scrollbar off with overflow:hidden */
-body.loading {
-	overflow: hidden;
-}
-
-/* Anytime the body has the loading class, our
-   modal element will be visible */
-body.loading .modal {
-	display: block;
-}
-
-.audiojs {
-	
-}
-
-tr {
-	width: 100%;
-}
-
-.welcome {
-	color: white;
-}
-
-.user {
-	color: white;
-	margin-top: -23px;
-	margin-left: 5px;
-}
-
-.btn {
-	margin-left: 2px;
-}
-
-@media screen and (max-device-width: 480px) {
-	#wrapper {
-		position: relative;
-		left: -3%;
-	}
-	#shortcuts {
-		display: none;
-	}
-}
-
-.audiojs audio {
-	position: absolute;
-	left: -1px;
-}
-
-.audiojs {
-	width: 460px;
-	height: 36px;
-	background: #333333;
-	overflow: hidden;
-	font-family: monospace;
-	font-size: 12px;
-	box-shadow: none;
-}
-
-.audiojs .play-pause {
-	border-right: 0px solid black;
-	width: 25px;
-	height: 40px;
-	padding: 4px 6px;
-	margin: 0px;
-	float: left;
-	overflow: hidden;
-}
-
-.audiojs p {
-	display: none;
-	width: 25px;
-	height: 40px;
-	margin: 0px;
-	cursor: pointer;
-}
-
-.audiojs .play {
-	display: block;
-}
-
-.audiojs .scrubber {
-	position: relative;
-	float: left;
-	width: 80%;
-	height: 14px;
-	margin: 10px;
-	border-left: 0px;
-	overflow: hidden;
-}
-
-.audiojs .progress {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height: 14px;
-	width: 0px;
-	-index: 1;
-}
-
-.audiojs .loaded {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height: 14px;
-	width: 0px;
-	background: #c00;
-}
-
-.audiojs .time {
-	float: left;
-	height: 36px;
-	line-height: 36px;
-	margin: 0px 0px 0px 6px;
-	padding: 0px 6px 0px 12px;
-	color: #600;
-	text-shadow: 1px 1px 0px rgba(125, 0, 0, 0.5);
-}
-
-.audiojs .time em {
-	padding: 0px 2px 0px 0px;
-	color: #fcc;
-	font-style: normal;
-}
-
-.audiojs .time strong {
-	padding: 0px 0px 0px 2px;
-	font-weight: normal;
-}
-
-.audiojs .error-message {
-	float: left;
-	display: none;
-	margin: 0px 10px;
-	height: 36px;
-	width: 400px;
-	overflow: hidden;
-	line-height: 36px;
-	white-space: nowrap;
-	color: #fff;
-	text-overflow: ellipsis;
-	-o-text-overflow: ellipsis;
-	-icab-text-overflow: ellipsis;
-	-khtml-text-overflow: ellipsis;
-	-mo-text-overflow: ellipsis;
-	-webkit-text-overflow: ellipsis;
-}
-
-.audiojs .error-message a {
-	color: #eee;
-	text-decoration: none;
-	padding-bottom: 1px;
-	border-bottom: 1px solid #999;
-	white-space: wrap;
-}
-
-.audiojs .play {
-	background: url('../js/player-graphics.gif') -2px -1px no-repeat;
-}
-
-.audiojs .loading {
-	background: url('../js/player-graphics.gif') -2px -31px no-repeat;
-}
-
-.audiojs .error {
-	background: url('../js/player-graphics.gif') -2px -61px no-repeat;
-}
-
-.audiojs .pause {
-	background: url('../js/player-graphics.gif') -2px -91px no-repeat;
-}
-
-.playing .play, .playing .loading, .playing .error {
-	display: none;
-}
-
-.playing .pause {
-	display: block;
-}
-
-.loading .play, .loading .pause, .loading .error {
-	display: none;
-}
-
-.loading .loading {
-	display: block;
-}
-
-.error .time, .error .play, .error .pause, .error .scrubber, .error .loading
-	{
-	display: none;
-}
-
-.error .error {
-	display: block;
-}
-
-.error .play-pause p {
-	cursor: auto;
-}
-
-.error .error-message {
-	display: block;
-}
-
-.audiojs audio {
-	position: absolute;
-	left: -1px;
-}
-
-.audiojs {
-	width: 460px;
-	height: 36px;
-	background: #333333;
-	overflow: hidden;
-	font-family: monospace;
-	font-size: 12px;
-	box-shadow: none;
-}
-
-.audiojs .play-pause {
-	border-right: 0px solid black;
-	width: 25px;
-	height: 40px;
-	padding: 4px 6px;
-	margin: 0px;
-	float: left;
-	overflow: hidden;
-}
-
-.audiojs p {
-	display: none;
-	width: 25px;
-	height: 40px;
-	margin: 0px;
-	cursor: pointer;
-}
-
-.audiojs .play {
-	display: block;
-}
-
-.audiojs .scrubber {
-	position: relative;
-	float: left;
-	width: 80%;
-	height: 14px;
-	margin: 10px;
-	border-left: 0px;
-	overflow: hidden;
-}
-
-.audiojs .progress {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height: 14px;
-	width: 0px;
-	-index: 1;
-}
-
-.audiojs .loaded {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height: 14px;
-	width: 0px;
-	background: #c00;
-}
-
-.audiojs .time {
-	float: left;
-	height: 36px;
-	line-height: 36px;
-	margin: 0px 0px 0px 6px;
-	padding: 0px 6px 0px 12px;
-	color: #600;
-	text-shadow: 1px 1px 0px rgba(125, 0, 0, 0.5);
-}
-
-.audiojs .time em {
-	padding: 0px 2px 0px 0px;
-	color: #fcc;
-	font-style: normal;
-}
-
-.audiojs .time strong {
-	padding: 0px 0px 0px 2px;
-	font-weight: normal;
-}
-
-.audiojs .error-message {
-	float: left;
-	display: none;
-	margin: 0px 10px;
-	height: 36px;
-	width: 400px;
-	overflow: hidden;
-	line-height: 36px;
-	white-space: nowrap;
-	color: #fff;
-	text-overflow: ellipsis;
-	-o-text-overflow: ellipsis;
-	-icab-text-overflow: ellipsis;
-	-khtml-text-overflow: ellipsis;
-	-mo-text-overflow: ellipsis;
-	-webkit-text-overflow: ellipsis;
-}
-
-.audiojs .error-message a {
-	color: #eee;
-	text-decoration: none;
-	padding-bottom: 1px;
-	border-bottom: 1px solid #999;
-	white-space: wrap;
-}
-
-.audiojs .play {
-	background: url('../js/player-graphics.gif') -2px -1px no-repeat;
-}
-
-.audiojs .loading {
-	background: url('../js/player-graphics.gif') -2px -31px no-repeat;
-}
-
-.audiojs .error {
-	background: url('../js/player-graphics.gif') -2px -61px no-repeat;
-}
-
-.audiojs .pause {
-	background: url('../js/player-graphics.gif') -2px -91px no-repeat;
-}
-
-.playing .play, .playing .loading, .playing .error {
-	display: none;
-}
-
-.playing .pause {
-	display: block;
-}
-
-.loading .play, .loading .pause, .loading .error {
-	display: none;
-}
-
-.loading .loading {
-	display: block;
-}
-
-.error .time, .error .play, .error .pause, .error .scrubber, .error .loading
-	{
-	display: none;
-}
-
-.error .error {
-	display: block;
-}
-
-.error .play-pause p {
-	cursor: auto;
-}
-
-.error .error-message {
-	display: block;
+	font-size: 1.5em;
+	background-color:#FDFFF2;
+	overflow:auto;
 }
